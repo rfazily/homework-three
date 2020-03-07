@@ -5,28 +5,38 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Password Generator</title>
 </head>
 <body>
     
-    
-    <div class="wrapper">
-        <header>
-          <h1>Password Generator</h1>
-        </header>
-        <div class="card">
-          <div class="card-header">
-            <h2>Generate a Password</h2>
-          </div>
-          <div class="card-body">
-            <textarea
-              readonly
-              id="password"
-              placeholder="Your Secure Password"
-              aria-label="Generated Password"
-            ></textarea>
-            
-          </div>
-        
+
+    <!-- Header Section -->
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <!-- End Header Section -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-md-8 centered">
+                <div class="main-box">
+                    <h2>Generate a Password</h2>
+                    <hr>
+                        <textarea
+                        readonly
+                        id="passwordOutput"
+                        placeholder="Your Secure Password"
+                        aria-label="Generated Password"
+                        ></textarea>
+                    <hr>
+                    <br>
+                    <button id="generate" onclick="passwordGenerate()">Generate Password</button>
+                    <button id="copy" onclick="copyClipboard()">Copy to Clipboard</button>
+                </div>
+            </div>
+            <div class="col-2"></div>
         </div>
       </div>
 <script src ="./assets/script.js"></script>
